@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calvary Chapel Julian – Church & Retreat Center</title>
+  <meta name="description" content="Calvary Chapel Julian is a fellowship of believers in Julian, CA. Join us Sunday mornings at 10am and evenings at 6pm for worship, Bible teaching, and fellowship.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --primary: #1a3c5e;
+      --primary-light: #2a5a82;
+      --accent: #c9a84c;
+      --accent-light: #e8d48b;
+      --bg: #faf8f5;
+      --bg-alt: #ffffff;
+      --text: #2d2d2d;
+      --text-light: #6b6b6b;
+      --text-muted: #9a9a9a;
+      --shadow: 0 2px 12px rgba(0,0,0,0.08);
+      --shadow-lg: 0 8px 32px rgba(0,0,0,0.12);
+      --radius: 12px;
+      --nav-height: 72px;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; color: var(--primary); line-height: 1.2; }
+    p { color: var(--text-light); }
+    a { color: var(--primary); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: var(--accent); }
+    img { max-width: 100%; display: block; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 28px; border-radius: 50px;
+      font-weight: 600; font-size: 0.95rem;
+      cursor: pointer; border: none;
+      transition: all 0.25s ease;
+      font-family: 'Inter', sans-serif;
+    }
+    .btn-primary {
+      background: var(--accent); color: var(--primary);
+      box-shadow: 0 4px 14px rgba(201,168,76,0.35);
+    }
+    .btn-primary:hover { background: var(--accent-light); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(201,168,76,0.45); }
+    .btn-outline {
+      background: transparent; color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+    .btn-outline:hover { background: var(--primary); color: #fff; }
+    .btn-dark {
+      background: var(--primary); color: #fff;
+    }
+    .btn-dark:hover { background: var(--primary-light); transform: translateY(-2px); }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      height: var(--nav-height);
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      transition: all 0.3s;
+    }
+    nav .container {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 100%;
+    }
+    .logo {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.35rem; font-weight: 800;
+      color: var(--primary); letter-spacing: -0.5px;
+    }
+    .logo span { color: var(--accent); }
+    .nav-links {
+      display: flex; align-items: center; gap: 6px;
+      list-style: none;
+    }
+    .nav-links a {
+      padding: 8px 14px; border-radius: 8px;
+      font-size: 0.88rem; font-weight: 500;
+      color: var(--text); transition: all 0.2s;
+    }
+    .nav-links a:hover { background: rgba(26,60,94,0.08); color: var(--primary); }
+    .nav-cta { display: flex; align-items: center; gap: 10px; }
+    .hamburger {
+      display: none;
+      flex-direction: column; gap: 5px;
+      cursor: pointer; padding: 8px;
+      background: none; border: none;
+    }
+    .hamburger span {
+      width: 24px; height: 2px;
+      background: var(--primary);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+    .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex; align-items: center;
+      background: linear-gradient(135deg, var(--primary) 0%, #0f2640 100%);
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      padding-top: var(--nav-height);
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.04)" d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,208C1248,224,1344,192,1440,160L1440,320L0,320Z"/></svg>') no-repeat bottom;
+      background-size: cover;
+    }
+    .hero .container {
+      position: relative; z-index: 1;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 60px; align-items: center;
+      padding: 60px 20px;
+    }
+    .hero-content h1 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      color: #fff; margin-bottom: 20px;
+      font-weight: 800;
+    }
+    .hero-content h1 .accent { color: var(--accent); }
+    .hero-content p {
+      font-size: 1.15rem; color: rgba(255,255,255,0.8);
+      margin-bottom: 32px; max-width: 500px;
+    }
+    .hero-buttons { display: flex; gap: 14px; flex-wrap: wrap; }
+    .hero-visual {
+      display: flex; justify-content: center; align-items: center;
+    }
+    .hero-card {
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 20px;
+      padding: 40px 35px;
+      width: 100%; max-width: 380px;
+      text-align: center;
+      color: #fff;
+    }
+    .hero-card .cross {
+      font-size: 3.5rem; margin-bottom: 16px;
+      display: block;
+    }
+    .hero-card h3 {
+      color: #fff; font-size: 1.4rem;
+      margin-bottom: 8px; font-family: 'Inter', sans-serif;
+      font-weight: 700;
+    }
+    .hero-card p {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.95rem; margin-bottom: 24px;
+    }
+    .service-time {
+      display: flex; justify-content: center; gap: 24px;
+      margin-top: 20px; flex-wrap: wrap;
+    }
+    .service-time-item {
+      background: rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 14px 20px;
+      text-align: center;
+      min-width: 120px;
+    }
+    .service-time-item .day {
+      font-size: 0.75rem; text-transform: uppercase;
+      letter-spacing: 1.5px; color: var(--accent);
+      font-weight: 600;
+    }
+    .service-time-item .time {
+      font-size: 1.1rem; font-weight: 700;
+      margin-top: 4px; color: #fff;
+    }
+    .service-time-item .label {
+      font-size: 0.8rem; color: rgba(255,255,255,0.6);
+    }
+
+    /* SECTIONS */
+    section { padding: 80px 0; }
+    .section-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+    .section-header h2 {
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      margin-bottom: 12px;
+    }
+    .section-header p {
+      font-size: 1.05rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .section-divider {
+      width: 60px; height: 3px;
+      background: var(--accent);
+      margin: 16px auto 0;
+      border-radius: 2px;
+    }
+
+    /* ABOUT */
+    #about { background: var(--bg-alt); }
+    .about-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 60px; align-items: center;
+    }
+    .about-image {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      border-radius: 20px;
+      height: 400px;
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,0.15);
+      font-size: 5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .about-image::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><circle cx="200" cy="200" r="180" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1"/><circle cx="200" cy="200" r="120" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/><circle cx="200" cy="200" r="60" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/></svg>') center/cover;
+    }
+    .about-text h2 { margin-bottom: 20px; }
+    .about-text p { margin-bottom: 16px; font-size: 1.02rem; }
+    .belief-list {
+      list-style: none;
+      margin-top: 28px;
+      display: grid; gap: 12px;
+    }
+    .belief-list li {
+      display: flex; align-items: flex-start; gap: 12px;
+      padding: 14px 18px;
+      background: var(--bg);
+      border-radius: 10px;
+      font-size: 0.95rem;
+    }
+    .belief-list li .icon {
+      font-size: 1.2rem; flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* SERVICE TIMES BANNER */
+    #service-times { background: var(--primary); color: #fff; }
+    #service-times .section-header h2 { color: #fff; }
+    #service-times .section-header p { color: rgba(255,255,255,0.75); }
+    #service-times .section-header .section-divider { background: var(--accent); }
+    .times-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .time-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius);
+      padding: 36px 28px;
+      text-align: center;
+      transition: all 0.3s;
+    }
+    .time-card:hover { background: rgba(255,255,255,0.14); transform: translateY(-4px); }
+    .time-card .icon { font-size: 2.5rem; margin-bottom: 14px; }
+    .time-card h3 {
+      color: #fff; font-size: 1.2rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 700; margin-bottom: 6px;
+    }
+    .time-card .time { font-size: 1.6rem; font-weight: 800; color: var(--accent); margin-bottom: 4px; }
+    .time-card .detail { color: rgba(255,255,255,0.65); font-size: 0.9rem; }
+
+    /* MINISTRIES */
+    #ministries { background: var(--bg); }
+    .ministries-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .ministry-card {
+      background: var(--bg-alt);
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(0,0,0,0.04);
+      transition: all 0.3s;
+    }
+    .ministry-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .ministry-card .icon {
+      font-size: 2.2rem; margin-bottom: 16px;
+      display: block;
+    }
+    .ministry-card h3 {
+      font-size: 1.15rem; margin-bottom: 8px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+    }
+    .ministry-card p { font-size: 0.92rem; }
+
+    /* STATEMENT OF FAITH */
+    #statement-of-faith { background: var(--bg-alt); }
+    .faith-content {
+      max-width: 780px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .faith-content h2 { margin-bottom: 24px; }
+    .faith-content p { font-size: 1.05rem; margin-bottom: 16px; text-align: left; }
+    .faith-quote {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.3rem;
+      color: var(--primary);
+      font-style: italic;
+      padding: 24px 32px;
+      border-left: 3px solid var(--accent);
+      background: var(--bg);
+      border-radius: 0 12px 12px 0;
+      text-align: left;
+      margin: 24px 0;
+    }
+
+    /* RETREATS */
+    #retreats { background: var(--bg); }
+    .retreats-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 28px;
+    }
+    .retreat-card {
+      background: var(--bg-alt);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: all 0.3s;
+    }
+    .retreat-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .retreat-card-image {
+      height: 200px;
+      background: linear-gradient(135deg, #4a7c59 0%, #2d5a3a 100%);
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,0.3);
+      font-size: 3rem;
+    }
+    .retreat-card-body { padding: 24px; }
+    .retreat-card-body h3 {
+      font-size: 1.15rem; margin-bottom: 8px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+    }
+    .retreat-card-body p { font-size: 0.92rem; margin-bottom: 16px; }
+    .retreat-card-body .tag {
+      display: inline-block;
+      background: rgba(201,168,76,0.15);
+      color: var(--accent);
+      padding: 4px 12px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    /* CALENDAR / EVENTS */
+    #calendar { background: var(--bg-alt); }
+    .calendar-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .event-card {
+      background: var(--bg);
+      border-radius: var(--radius);
+      padding: 24px;
+      border-left: 3px solid var(--accent);
+      transition: all 0.2s;
+    }
+    .event-card:hover { background: var(--bg-alt); box-shadow: var(--shadow); }
+    .event-date {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .event-card h4 {
+      font-size: 1.05rem; margin-bottom: 6px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+    }
+    .event-card p { font-size: 0.9rem; }
+
+    /* CONTACT */
+    #contact { background: var(--primary); color: #fff; }
+    #contact .section-header h2 { color: #fff; }
+    #contact .section-header p { color: rgba(255,255,255,0.75); }
+    #contact .section-header .section-divider { background: var(--accent); }
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 48px; align-items: start;
+    }
+    .contact-info { display: flex; flex-direction: column; gap: 20px; }
+    .contact-item {
+      display: flex; gap: 16px; align-items: flex-start;
+      background: rgba(255,255,255,0.08);
+      padding: 20px 24px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .contact-item .icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 2px; }
+    .contact-item h4 {
+      color: #fff; font-family: 'Inter', sans-serif;
+      font-size: 0.95rem; font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .contact-item p, .contact-item a {
+      color: rgba(255,255,255,0.8);
+      font-size: 0.95rem;
+    }
+    .contact-item a:hover { color: var(--accent); }
+    .map-container {
+      border-radius: var(--radius);
+      overflow: hidden;
+      height: 280px;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    .map-container iframe {
+      width: 100%; height: 100%;
+      border: 0;
+      filter: grayscale(0.8) brightness(0.7);
+    }
+    .contact-form {
+      background: rgba(255,255,255,0.08);
+      border-radius: var(--radius);
+      padding: 32px;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    .contact-form h3 {
+      color: #fff; font-size: 1.2rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 700; margin-bottom: 20px;
+    }
+    .form-group { margin-bottom: 16px; }
+    .form-group label {
+      display: block;
+      color: rgba(255,255,255,0.7);
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+    .form-group input, .form-group textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.06);
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      transition: border-color 0.2s;
+    }
+    .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,0.4); }
+    .form-group input:focus, .form-group textarea:focus {
+      outline: none; border-color: var(--accent);
+    }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+    /* FOOTER */
+    footer {
+      background: #0f2640;
+      color: rgba(255,255,255,0.6);
+      padding: 40px 0;
+      text-align: center;
+    }
+    footer .container {
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 16px;
+    }
+    footer .logo { color: #fff; font-size: 1.1rem; margin-bottom: 0; }
+    footer a { color: rgba(255,255,255,0.5); font-size: 0.85rem; }
+    footer a:hover { color: var(--accent); }
+    .footer-links { display: flex; gap: 20px; }
+    .footer-social { display: flex; gap: 12px; }
+    .footer-social a {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,0.5);
+      font-size: 1.1rem;
+      transition: all 0.2s;
+    }
+    .footer-social a:hover { background: var(--accent); color: var(--primary); }
+
+    /* MOBILE NAV OVERLAY */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(255,255,255,0.98);
+      backdrop-filter: blur(12px);
+      z-index: 999;
+      padding: 20px;
+      flex-direction: column;
+      gap: 8px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+    .mobile-nav.open { opacity: 1; pointer-events: all; }
+    .mobile-nav a {
+      padding: 14px 20px;
+      font-size: 1.1rem; font-weight: 500;
+      border-radius: 10px;
+      color: var(--text);
+    }
+    .mobile-nav a:hover { background: rgba(26,60,94,0.08); }
+    .mobile-nav .mobile-cta {
+      margin-top: 16px;
+      display: flex; flex-direction: column; gap: 10px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .mobile-nav { display: flex; }
+      .hero .container { grid-template-columns: 1fr; text-align: center; }
+      .hero-content p { margin: 0 auto 32px; }
+      .hero-buttons { justify-content: center; }
+      .hero-visual { display: none; }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-image { height: 260px; order: -1; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .times-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .hero-card { max-width: 100%; margin: 0 auto; }
+      .service-time { justify-content: center; }
+      footer .container { flex-direction: column; text-align: center; }
+    }
+    @media (max-width: 480px) {
+      section { padding: 56px 0; }
+      .container { padding: 0 16px; }
+      .btn { padding: 12px 22px; font-size: 0.9rem; }
+    }
+
+    /* ANIMATIONS */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="container">
+      <a href="#home" class="logo">Calvary <span>Chapel</span> Julian</a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#ministries">Ministries</a></li>
+        <li><a href="#calendar">Calendar</a></li>
+        <li><a href="#statement-of-faith">Statement of Faith</a></li>
+        <li><a href="#servants">Servants</a></li>
+        <li><a href="#retreats">Retreats & Camping</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="#live-stream" class="btn btn-primary" style="padding: 10px 22px; font-size: 0.85rem;">LIVE STREAM</a>
+        <a href="#give" class="btn btn-outline" style="padding: 10px 22px; font-size: 0.85rem; border-radius: 50px;">GIVE</a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#ministries">Ministries</a>
+    <a href="#calendar">Calendar</a>
+    <a href="#statement-of-faith">Statement of Faith</a>
+    <a href="#servants">Servants</a>
+    <a href="#retreats">Retreats & Camping</a>
+    <a href="#contact">Contact</a>
+    <div class="mobile-cta">
+      <a href="#live-stream" class="btn btn-primary" style="justify-content: center;">LIVE STREAM</a>
+      <a href="#give" class="btn btn-dark" style="justify-content: center;">GIVE ONLINE</a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Calvary Chapel <span class="accent">Julian</span></h1>
+        <p>A fellowship of believers under the Lordship of Jesus Christ. Join us for worship, Bible teaching, and authentic Christian community in the heart of Julian.</p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary">Plan a Visit</a>
+          <a href="#live-stream" class="btn" style="background: rgba(255,255,255,0.15); color: #fff; border: 1px solid rgba(255,255,255,0.3); border-radius: 50px;">Watch Live Stream</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card">
+          <span class="cross">✝</span>
+          <h3>Church & Retreat Center</h3>
+          <p>Join us this Sunday — everyone is welcome.</p>
+          <div class="service-time">
+            <div class="service-time-item">
+              <div class="day">Sunday Morning</div>
+              <div class="time">10:00 AM</div>
+              <div class="label">Worship & Teaching</div>
+            </div>
+            <div class="service-time-item">
+              <div class="day">Sunday Evening</div>
+              <div class="time">6:00 PM</div>
+              <div class="label">Fellowship</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT / WHO WE ARE -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image fade-in"></div>
+        <div class="about-text fade-in">
+          <div class="section-header" style="text-align: left; margin-bottom: 24px;">
+            <h2>Who We Are</h2>
+            <div class="section-divider" style="margin: 0 0 0 0;"></div>
+          </div>
+          <p>Calvary Chapel Julian is a fellowship of believers under the Lordship of Jesus Christ. Our greatest desire is to know Him and to be conformed into His image by the power of the Holy Spirit.</p>
+          <p>We believe the true basis of Christian fellowship is God's love, which is greater than our differences.</p>
+          <p>In our services we believe the following:</p>
+          <ul class="belief-list">
+            <li><span class="icon">✦</span> <strong>Spiritual Worship</strong> — We seek to remain flexible and yielded to the Holy Spirit to direct our worship.</li>
+            <li><span class="icon">🎵</span> <strong>Inspirational Worship</strong> — We give great place to music in our worship.</li>
+            <li><span class="icon">📖</span> <strong>Intelligent Worship</strong> — We emphasize Bible teaching so God may instruct us as to how He would be worshiped.</li>
+            <li><span class="icon">❤️</span> <strong>Fruitful Worship</strong> — We look for His love in our lives as the greatest evidence that we are truly worshiping Him.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE TIMES -->
+  <section id="service-times">
+    <div class="container">
+      <div class="section-header">
+        <h2>Service Times</h2>
+        <p>Join us every week for worship, teaching, and fellowship</p>
+        <div class="section-divider"></div>
+      </div>
+      <div class="times-grid">
+        <div class="time-card fade-in">
+          <div class="icon">🌅</div>
+          <h3>Sunday Morning</h3>
+          <div class="time">10:00 AM</div>
+          <div class="detail">Worship & Bible Teaching</div>
+        </div>
+        <div class="time-card fade-in">
+          <div class="icon">🌙</div>
+          <h3>Sunday Evening</h3>
+          <div class="time">6:00 PM</div>
+          <div class="detail">Fellowship & Evening Service</div>
+        </div>
+        <div class="time-card fade-in">
+          <div class="icon">📍</div>
+          <h3>Location</h3>
+          <div class="time" style="font-size: 1rem; font-weight: 600;">3731 Wynola Rd</div>
+          <div class="detail">Julian, CA 92036</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MINISTRIES -->
+  <section id="ministries">
+    <div class="container">
+      <div class="section-header">
+        <h2>Ministries</h2>
+        <p>Get involved and grow in your faith through our various ministries and groups</p>
+        <div class="section-divider"></div>
+      </div>
+      <div class="ministries-grid">
+        <div class="ministry-card fade-in">
+          <span class="icon">👥</span>
+          <h3>Youth Ministry</h3>
+          <p>A place for young people to grow in their faith, build community, and discover their purpose in Christ through teaching, activities, and fellowship.</p>
+        </div>
+        <div class="ministry-card fade-in">
+          <span class="icon">🙏</span>
+          <h3>Prayer Ministry</h3>
+          <p>Committed to praying for our church, community, and the world. Join us for prayer gatherings and intercessory prayer opportunities.</p>
+        </div>
+        <div class="ministry-card fade-in">
+          <span class="icon">📖</span>
+          <h3>Bible Study Groups</h3>
+          <p>Deepen your understanding of God's Word through small group Bible studies. Various groups meet throughout the week for all ages and stages of life.</p>
+        </div>
+        <div class="ministry-card fade-in">
+          <span class="icon">🤝</span>
+          <h3>Community Outreach</h3>
+          <p>Serving the Julian community and beyond. We believe in being the hands and feet of Jesus through local service projects and missions.</p>
+        </div>
+        <div class="ministry-card fade-in">
+          <span class="icon">🎵</span>
+          <h3>Worship Team</h3>
+          <p>Leading our congregation in spirited, Spirit-led worship. Music is a vital part of our services and we're always looking for those with gifts to join.</p>
+        </div>
+        <div class="ministry-card fade-in">
+          <span class="icon">🧒</span>
+          <h3>Children's Ministry</h3>
+          <p>Nurturing the next generation with age-appropriate Bible teaching, activities, and a safe environment where children can grow in Christ.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATEMENT OF FAITH -->
+  <section id="statement-of-faith">
+    <div class="container">
+      <div class="faith-content fade-in">
+        <div class="section-header" style="margin-bottom: 32px;">
+          <h2>Statement of Faith</h2>
+          <div class="section-divider"></div>
+        </div>
+        <p>We believe the Bible is the inspired Word of God and the final authority for faith and practice.</p>
+        <div class="faith-quote">
+          "The Worship of God should be spiritual; therefore we seek to remain flexible and yielded to the Holy Spirit to direct our worship."
+        </div>
+        <p>We believe in the one true God, eternally existing in three persons: Father, Son, and Holy Spirit.</p>
+        <p>We believe that salvation is by grace through faith in Jesus Christ alone — not by works, lest any man should boast.</p>
+        <p>We believe in the deity of Christ, His virgin birth, His sinless life, His miracles, His vicarious and atoning death, His bodily resurrection, and His imminent return.</p>
+        <p>We believe the Holy Spirit is a person who convicts the world of sin, regenerates sinners, and empowers believers for witness and service.</p>
+        <p>We believe in the spiritual unity of all believers in Christ and that the local church is the primary expression of that fellowship.</p>
+        <p>For a complete statement of our foundational beliefs, we follow the Calvary Chapel network's statement of faith rooted in the authority and sufficiency of Scripture.</p>
+        <div style="margin-top: 32px;">
+          <a href="#contact" class="btn btn-outline" style="border-color: var(--primary); color: var(--primary);">Contact Us with Questions</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RETREATS & CAMPING -->
+  <section id="retreats">
+    <div class="container">
+      <div class="section-header">
+        <h2>Retreats & Camping</h2>
+        <p>Escape the noise and draw closer to God in the beautiful Julian countryside</p>
+        <div class="section-divider"></div>
+      </div>
+      <div class="retreats-grid">
+        <div class="retreat-card fade-in">
+          <div class="retreat-card-image">🏕️</div>
+          <div class="retreat-card-body">
+            <h3>Weekend Retreats</h3>
+            <p>Unplug and reconnect with God and others through our weekend retreat programs. Perfect for small groups, families, and individuals seeking renewal.</p>
+            <span class="tag">Group Rates Available</span>
+          </div>
+        </div>
+        <div class="retreat-card fade-in">
+          <div class="retreat-card-image">🌲</div>
+          <div class="retreat-card-body">
+            <h3>Camping Facilities</h3>
+            <p>Our campground offers a peaceful setting for families and groups. Enjoy the mountain air, campfire fellowship, and the beauty of God's creation in Julian.</p>
+            <span class="tag">Open Year-Round</span>
+          </div>
+        </div>
+        <div class="retreat-card fade-in">
+          <div class="retreat-card-image">⛺</div>
+          <div class="retreat-card-body">
+            <h3>Youth Camps</h3>
+            <p>Specialized camping programs for youth and teens, combining outdoor adventure with Bible teaching, worship, and lifelong discipleship.</p>
+            <span class="tag">Seasonal Programs</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALENDAR / EVENTS -->
+  <section id="calendar">
+    <div class="container">
+      <div class="section-header">
+        <h2>Calendar & Events</h2>
+        <p>Stay up to date with what's happening at Calvary Chapel Julian</p>
+        <div class="section-divider"></div>
+      </div>
+      <div class="calendar-grid">
+        <div class="event-card fade-in">
+          <div class="event-date">Every Sunday · 10:00 AM</div>
+          <h4>Sunday Morning Service</h4>
+          <p>Worship, prayer, and verse-by-verse Bible teaching. All are welcome — no dress code, just bring yourself.</p>
+        </div>
+        <div class="event-card fade-in">
+          <div class="event-date">Every Sunday · 6:00 PM</div>
+          <h4>Sunday Evening Fellowship</h4>
+          <p>An evening of worship, community, and deeper fellowship. A great time to connect with the church family.</p>
+        </div>
+        <div class="event-card fade-in">
+          <div class="event-date">Midweek · Times Vary</div>
+          <h4>Bible Study & Prayer Meetings</h4>
+          <p>Join us midweek for deeper study and intercession. Check back for current schedules and group offerings.</p>
+        </div>
+        <div class="event-card fade-in">
+          <div class="event-date">Seasonal</div>
+          <h4>Retreats & Camping Events</h4>
+          <p>Throughout the year we host retreats, youth camps, and family camping events in the Julian mountains.</p>
+        </div>
+        <div class="event-card fade-in">
+          <div class="event-date">Annually</div>
+          <h4>Special Services</h4>
+          <p>Easter, Christmas, and other seasonal celebrations with special music and messages.</p>
+        </div>
+        <div class="event-card fade-in">
+          <div class="event-date">Ongoing</div>
+          <h4>Children's & Youth Programs</h4>
+          <p>Weekly programs for kids and teens. Contact us for current schedules and age groups.</p>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 40px;">
+        <a href="#contact" class="btn btn-primary">Get Calendar Updates</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVANTS -->
+  <section id="servants" style="background: var(--bg-alt);">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Servants & Leadership</h2>
+        <p>Meet the people who serve and lead our church family</p>
+        <div class="section-divider"></div>
+      </div>
+      <div style="max-width: 700px; margin: 0 auto; text-align: center;" class="fade-in">
+        <p>Our church is led by a team of pastors and servants who are called and committed to shepherd the flock of God. We operate under the authority of Scripture and the leadership of the Holy Spirit.</p>
+        <p style="margin-top: 20px;">Calvary Chapel Julian is part of the Calvary Chapel fellowship — a network of independent, Bible-believing churches that emphasize verse-by-verse teaching of God's Word.</p>
+        <div style="margin-top: 32px; background: var(--bg); border-radius: 12px; padding: 28px; text-align: left;">
+          <h3 style="font-size: 1.1rem; margin-bottom: 14px; font-family: 'Inter', sans-serif; font-weight: 700;">Core Values of Our Leadership</h3>
+          <ul class="belief-list" style="text-align: left;">
+            <li><span class="icon">📖</span> <strong>Bible-Centered</strong> — We are committed to the Authority and inerrancy of Scripture as our sole guide.</li>
+            <li><span class="icon">💧</span> <strong>Spirit-Led</strong> — We rely on the Holy Spirit to direct our ministry and empower our service.</li>
+            <li><span class="icon">❤️</span> <strong>Love-Driven</strong> — We lead with humility, compassion, and sacrificial love for those we serve.</li>
+            <li><span class="icon">🌍</span> <strong>Outreach-Focused</strong> — We are committed to reaching the lost and making disciples of all nations.</li>
+          </ul>
+        </div>
+        <div style="margin-top: 32px;">
+          <a href="#contact" class="btn btn-dark">Contact Our Leadership</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GIVE -->
+  <section id="give" style="background: var(--bg);">
+    <div class="container">
+      <div class="section-header">
+        <h2>Give Online</h2>
+        <p>Your generosity helps us serve the community and advance the Gospel</p>
+        <div class="section-divider"></div>
+      </div>
+      <div style="max-width: 540px; margin: 0 auto; text-align: center; background: var(--bg-alt); border-radius: 16px; padding: 40px; box-shadow: var(--shadow);" class="fade-in">
+        <p style="margin-bottom: 20px;">We believe in cheerful giving and are grateful for your partnership in the Gospel. Your donations help support our ministry, outreach, facilities, and the spread of God's Word in our community.</p>
+        <a href="#contact" class="btn btn-primary" style="margin-bottom: 16px;">Give Online</a>
+        <p style="font-size: 0.85rem; color: var(--text-muted);">For alternative giving options or questions about giving, please contact us directly.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIVE STREAM -->
+  <section id="live-stream" style="background: var(--primary);">
+    <div class="container" style="text-align: center; padding: 80px 20px;">
+      <div class="fade-in">
+        <span style="font-size: 3rem; display: block; margin-bottom: 16px;">📡</span>
+        <h2 style="color: #fff; font-size: 2rem; margin-bottom: 12px;">Watch Our Live Stream</h2>
+        <p style="color: rgba(255,255,255,0.75); margin-bottom: 32px; font-size: 1.05rem;">Can't make it in person? Join us online for our Sunday services.</p>
+        <a href="#" class="btn btn-primary" id="liveStreamBtn">Connect to Live Stream</a>
+        <p style="color: rgba(255,255,255,0.5); font-size: 0.85rem; margin-top: 16px;">Live streaming during service hours. Check service times above.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2>Contact Us</h2>
+        <p>We'd love to hear from you. Reach out with any questions or to learn more about our church.</p>
+        <div class="section-divider"></div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info fade-in">
+          <div class="contact-item">
+            <span class="icon">📍</span>
+            <div>
+              <h4>Church Address</h4>
+              <p>3731 Wynola Rd<br>Julian, CA 92036</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="icon">📞</span>
+            <div>
+              <h4>Phone</h4>
+              <a href="tel:7607036007">760-703-6007</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="icon">🕐</span>
+            <div>
+              <h4>Service Times</h4>
+              <p>Sundays 10:00 AM<br>Sunday Evenings 6:00 PM</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="icon">💬</span>
+            <div>
+              <h4>Visit Us</h4>
+              <p>We would love to have you come by and join us for worship, the teaching of God's Word, and fellowship. Everyone is welcome!</p>
+            </div>
+          </div>
+        </div>
+        <div class="fade-in">
+          <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3300.6!2d-116.84!3d33.4!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDQ0JzU3LjYiTiAxMTfCsDI0JzU0LjgiVw!5e0!3m2!1sen!2sus!4v1600000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+          <div class="contact-form" style="margin-top: 24px;">
+            <h3>Send Us a Message</h3>
+            <form id="contactForm" onsubmit="handleSubmit(event)">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Your Name</label>
+                  <input type="text" id="name" placeholder="John Doe" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" id="email" placeholder="john@example.com" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" placeholder="How can we help?">
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" placeholder="Tell us what's on your heart..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="logo">Calvary <span>Chapel</span> Julian</div>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#ministries">Ministries</a>
+        <a href="#contact">Contact</a>
+        <a href="#give">Give</a>
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="YouTube">▶</a>
+        <a href="#" aria-label="Instagram">📷</a>
+      </div>
+      <p style="margin-top: 16px; font-size: 0.8rem;">© 2025 Calvary Chapel Julian. All rights reserved. | Powered with love.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      mobileNav.classList.toggle('open');
+      document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+    });
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        mobileNav.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // Close mobile nav on resize
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) {
+        hamburger.classList.remove('active');
+        mobileNav.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    });
+
+    // Scroll animations
+    const fadeEls = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    fadeEls.forEach(el => observer.observe(el));
+
+    // Live stream button
+    document.getElementById('liveStreamBtn').addEventListener('click', function(e) {
+      e.preventDefault();
+      if (confirm('Live streaming is available during service hours (Sundays 10:00 AM & 6:00 PM). Would you like to join our mailing list to get stream links?')) {
+        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+
+    // Contact form
+    function handleSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      alert(`Thank you, ${name}! We've received your message and will get back to you soon. For immediate assistance, please call 760-703-6007.`);
+      e.target.reset();
+    }
+    window.handleSubmit = handleSubmit;
+
+    // Smooth nav highlight
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const sections = document.querySelectorAll('section[id]');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const top = section.offsetTop - 120;
+        if (scrollY >= top) current = section.getAttribute('id');
+      });
+      navLinks.forEach(link => {
+        link.style.color = link.getAttribute('href') === '#' + current ? 'var(--accent)' : '';
+      });
+    });
+  </script>
+</body>
+</html>
