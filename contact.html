@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calvary Chapel Julian – Church & Retreat Center</title>
-  <meta name="description" content="Calvary Chapel Julian is a fellowship of believers in Julian, CA. Join us Sunday mornings at 10am and evenings at 6pm for worship, Bible teaching, and fellowship.">
+  <title>Contact Us – Calvary Chapel Julian</title>
+  <meta name="description" content="Contact Calvary Chapel Julian at 3731 Wynola Rd, Julian CA 92036. Call 760-703-6007 or send us a message.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
@@ -609,61 +609,104 @@
   </div>
 
 
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="container">
-      <div class="hero-content">
-        <h1>Calvary Chapel <span class="accent">Julian</span></h1>
-        <p>A fellowship of believers under the Lordship of Jesus Christ. Join us for worship, Bible teaching, and authentic Christian community in the heart of Julian.</p>
-        <div class="hero-buttons">
-          <a href="contact.html" class="btn btn-primary">Plan a Visit</a>
-          <a href="index.html#live-stream" class="btn" style="background: rgba(255,255,255,0.15); color: #fff; border: 1px solid rgba(255,255,255,0.3); border-radius: 50px;">Watch Live Stream</a>
+  <!-- PAGE CONTENT -->
+
+<section id="contact" style="background: var(--primary); color: #fff; padding: 80px 0;">
+  <div class="container">
+    <div class="section-header">
+      <h2>Contact Us</h2>
+      <p>We'd love to hear from you. Reach out with any questions or to learn more about our church.</p>
+      <div class="section-divider"></div>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info fade-in">
+        <div class="contact-item">
+          <span class="icon">&#128205;</span>
+          <div>
+            <h4>Church Address</h4>
+            <p>3731 Wynola Rd<br>Julian, CA 92036</p>
+          </div>
         </div>
-      </div>
-      <div class="hero-visual">
-        <div class="hero-card">
-          <span class="cross">&#10013;</span>
-          <h3>Church &amp; Retreat Center</h3>
-          <p>Join us this Sunday &mdash; everyone is welcome.</p>
-          <div class="service-time">
-            <div class="service-time-item">
-              <div class="day">Sunday Morning</div>
-              <div class="time">10:00 AM</div>
-              <div class="label">Worship &amp; Teaching</div>
-            </div>
-            <div class="service-time-item">
-              <div class="day">Sunday Evening</div>
-              <div class="time">6:00 PM</div>
-              <div class="label">Fellowship</div>
-            </div>
+        <div class="contact-item">
+          <span class="icon">&#128222;</span>
+          <div>
+            <h4>Phone</h4>
+            <a href="tel:7607036007">760-703-6007</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="icon">&#128337;</span>
+          <div>
+            <h4>Service Times</h4>
+            <p>Sundays 10:00 AM<br>Sunday Evenings 6:00 PM</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="icon">&#128172;</span>
+          <div>
+            <h4>Visit Us</h4>
+            <p>We would love to have you come by and join us for worship, the teaching of God's Word, and fellowship. Everyone is welcome!</p>
           </div>
         </div>
       </div>
+      <div class="fade-in">
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3300.6!2d-116.84!3d33.4!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDQ0JzU3LjYiTiAxMTfCsDI0JzU0LjgiVw!5e0!3m2!1sen!2sus!4v1600000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="contact-form" style="margin-top: 24px;">
+          <h3>Send Us a Message</h3>
+          <form id="contactForm" onsubmit="handleSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" placeholder="John Doe" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="john@example.com" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" placeholder="How can we help?">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" placeholder="Tell us what's on your heart..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Send Message</button>
+          </form>
+        </div>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- PAGE CONTENT -->
-
-<section style="background: var(--bg-alt); padding: 80px 0;">
+<!-- GIVE -->
+<section id="give" style="background: var(--bg); padding: 80px 0;">
   <div class="container">
     <div class="section-header">
-      <h2>Welcome to Calvary Chapel Julian</h2>
-      <p>A Bible-based church in the heart of Julian, California</p>
+      <h2>Give Online</h2>
+      <p>Your generosity helps us serve the community and advance the Gospel</p>
       <div class="section-divider"></div>
     </div>
-    <div style="max-width: 700px; margin: 0 auto; text-align: center;">
-      <p style="font-size: 1.05rem; margin-bottom: 20px;">
-        Whether you're visiting Julian for the weekend or looking for a church home,
-        we'd love to meet you. Calvary Chapel Julian is a place where people gather
-        to worship God, study His Word, and build genuine Christian fellowship.
-      </p>
-      <p style="font-size: 1.05rem; margin-bottom: 24px;">
-        We believe in the authority of Scripture, the power of the Holy Spirit,
-        and the love of God that brings us together. Our services are casual,
-        welcoming, and focused on Jesus Christ.
-      </p>
-      <a href="contact.html" class="btn btn-primary">Visit Us This Sunday</a>
-      <a href="ministries.html" class="btn btn-outline" style="margin-left: 12px;">Explore Ministries</a>
+    <div style="max-width: 540px; margin: 0 auto; text-align: center; background: var(--bg-alt); border-radius: 16px; padding: 40px; box-shadow: var(--shadow);" class="fade-in">
+      <p style="margin-bottom: 20px;">We believe in cheerful giving and are grateful for your partnership in the Gospel. Your donations help support our ministry, outreach, facilities, and the spread of God's Word in our community.</p>
+      <a href="contact.html" class="btn btn-primary" style="margin-bottom: 16px;">Give Online</a>
+      <p style="font-size: 0.85rem; color: var(--text-muted);">For alternative giving options or questions about giving, please contact us directly.</p>
+    </div>
+  </div>
+</section>
+
+<!-- LIVE STREAM -->
+<section id="live-stream" style="background: var(--primary); padding: 80px 0;">
+  <div class="container" style="text-align: center;">
+    <div class="fade-in">
+      <span style="font-size: 3rem; display: block; margin-bottom: 16px;">&#128273;</span>
+      <h2 style="color: #fff; font-size: 2rem; margin-bottom: 12px; font-family: 'Playfair Display', Georgia, serif;">Watch Our Live Stream</h2>
+      <p style="color: rgba(255,255,255,0.75); margin-bottom: 32px; font-size: 1.05rem;">Can't make it in person? Join us online for our Sunday services.</p>
+      <a href="#" class="btn btn-primary" id="liveStreamBtn">Connect to Live Stream</a>
+      <p style="color: rgba(255,255,255,0.5); font-size: 0.85rem; margin-top: 16px;">Live streaming during service hours. Check service times above.</p>
     </div>
   </div>
 </section>
